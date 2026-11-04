@@ -22,6 +22,23 @@ header {
   background-color: #1a237e;
   color: white;
   border-radius: 5px;
+  position: relative;
+}
+
+.admin-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.15);
+  font-size: 20px;
+}
+
+.admin-button.logged-in {
+  background-color: #2e7d32;
 }
 
 header h1 {
@@ -190,6 +207,38 @@ button:hover {
 
 .hidden {
   display: none;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal:not(.hidden) {
+  display: flex;
+}
+
+.modal-content {
+  position: relative;
+  width: min(420px, calc(100% - 40px));
+  padding: 24px;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.close-button {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  padding: 4px 10px;
+  background: none;
+  color: #333;
+  font-size: 24px;
 }
 
 footer {
